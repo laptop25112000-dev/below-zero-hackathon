@@ -124,7 +124,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterClick }) => {
             }`}
           >
             <img
-              src="/lost_in_stars_logo.jpg"
+              src="./lost_in_stars_logo.jpg"
               alt="Lost in Stars Official Logo"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />

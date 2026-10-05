@@ -16,7 +16,7 @@ export const LostInStarsEmblem: React.FC<{ size?: number; className?: string }> 
       className={`relative shrink-0 rounded-full overflow-hidden border-2 border-[#FF1744] shadow-[0_0_18px_rgba(255,23,68,0.45)] bg-black group select-none ${className}`}
     >
       <img
-        src="/lost_in_stars_logo.jpg"
+        src="./lost_in_stars_logo.jpg"
         alt="Lost in Stars Logo"
         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         loading="eager"
@@ -161,7 +161,7 @@ export const HeroOrbitalGraphic: React.FC<{ className?: string }> = ({ className
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="relative w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-[#FF1744] shadow-[0_0_50px_rgba(255,23,68,0.55)] bg-black z-20 pointer-events-auto group">
           <img
-            src="/lost_in_stars_logo.jpg"
+            src="./lost_in_stars_logo.jpg"
             alt="Lost in Stars Official Logo"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
@@ -199,7 +199,7 @@ export const LostInStarsPosterCard: React.FC<{ className?: string }> = ({ classN
     <div className={`w-full max-w-sm border-2 border-[#FF1744] sticker-shadow-yellow bg-black p-2.5 select-none ${className}`}>
       <div className="relative overflow-hidden group">
         <img
-          src="/lost_in_stars_poster.jpg"
+          src="./lost_in_stars_poster.jpg"
           alt="Lost in Stars Official Artwork"
           className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
         />
