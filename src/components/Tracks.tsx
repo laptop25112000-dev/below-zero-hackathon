@@ -213,7 +213,7 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
         {/* The 5 Asymmetric Arenas Composition with Scroll Journey Energy Path */}
         <div className="relative space-y-8 sm:space-y-12 lg:space-y-16 py-2 sm:py-6">
           
-          {/* Subtle Dynamic Connecting Energy Line (Desktop SVG Path drawing with scroll) */}
+          {/* Dynamic Connecting Energy Line (Desktop SVG Path zig-zagging between left and right cards) */}
           <div className="hidden lg:block absolute inset-0 pointer-events-none z-0">
             <svg className="w-full h-full" viewBox="0 0 1000 1200" fill="none" preserveAspectRatio="none">
               <defs>
@@ -225,7 +225,7 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
               </defs>
               {/* Background Path Guideline */}
               <path
-                d="M 320 80 L 720 280 L 300 560 L 700 840 L 500 1100"
+                d="M 280 100 L 720 320 L 280 560 L 720 800 L 280 1040"
                 stroke="#FFFFFF"
                 strokeWidth="1.5"
                 strokeOpacity="0.15"
@@ -233,7 +233,7 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
               />
               {/* Animated Foreground Progress Energy Path driven by scroll */}
               <motion.path
-                d="M 320 80 L 720 280 L 300 560 L 700 840 L 500 1100"
+                d="M 280 100 L 720 320 L 280 560 L 720 800 L 280 1040"
                 stroke="url(#arenaGradient)"
                 strokeWidth="3.5"
                 style={{ pathLength: pathProgress }}
@@ -242,8 +242,8 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
             </svg>
           </div>
 
-          {/* Arena 01: AI MODEL MAKING */}
-          <div className="flex justify-start lg:pl-6 relative z-10 w-full">
+          {/* Arena 01: AI MODEL MAKING (Left Corner) */}
+          <div className="flex justify-start relative z-10 w-full lg:pl-2 xl:pl-6">
             <ArenaCard
               track={tracks[0]}
               isSelected={activeTrackId === tracks[0].id}
@@ -262,8 +262,8 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
             />
           </div>
 
-          {/* Arena 02: WEB DEVELOPMENT */}
-          <div className="flex justify-end lg:pr-8 relative z-10 w-full">
+          {/* Arena 02: WEB DEVELOPMENT (Right Corner) */}
+          <div className="flex justify-end relative z-10 w-full lg:pr-2 xl:pr-6">
             <ArenaCard
               track={tracks[1]}
               isSelected={activeTrackId === tracks[1].id}
@@ -282,8 +282,8 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
             />
           </div>
 
-          {/* Arena 03: GAME DEVELOPMENT */}
-          <div className="flex justify-start lg:pl-16 relative z-10 w-full">
+          {/* Arena 03: GAME DEVELOPMENT (Left Corner) */}
+          <div className="flex justify-start relative z-10 w-full lg:pl-2 xl:pl-6">
             <ArenaCard
               track={tracks[2]}
               isSelected={activeTrackId === tracks[2].id}
@@ -302,8 +302,8 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
             />
           </div>
 
-          {/* Arena 04: AI AGENTS */}
-          <div className="flex justify-end lg:pr-14 relative z-10 w-full">
+          {/* Arena 04: AI AGENTS (Right Corner) */}
+          <div className="flex justify-end relative z-10 w-full lg:pr-2 xl:pr-6">
             <ArenaCard
               track={tracks[3]}
               isSelected={activeTrackId === tracks[3].id}
@@ -322,8 +322,8 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
             />
           </div>
 
-          {/* Arena 05: VOICE ASSISTANTS */}
-          <div className="flex justify-center relative z-10 w-full">
+          {/* Arena 05: VOICE ASSISTANTS (Left Corner) */}
+          <div className="flex justify-start relative z-10 w-full lg:pl-2 xl:pl-6">
             <ArenaCard
               track={tracks[4]}
               isSelected={activeTrackId === tracks[4].id}
@@ -336,9 +336,9 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
                 playSfx('click');
               }}
               onRsvp={() => onSelectTrackForRsvp(tracks[4].title)}
-              className="w-full lg:max-w-3xl"
+              className="w-full lg:max-w-2xl"
               badgeColor="yellow"
-              direction="up"
+              direction="left"
             />
           </div>
 
