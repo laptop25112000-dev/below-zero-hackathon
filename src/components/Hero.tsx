@@ -5,6 +5,7 @@ import { HeroOrbitalGraphic } from './LostInStarsLogo';
 import { CountdownTimer } from './CountdownTimer';
 import { easeCinematic, easeSnappy, CharacterReveal, TiltCard } from '../utils/motion';
 import { playSfx } from '../utils/audio';
+import lostInStarsLogo from '../assets/lost_in_stars_logo.jpg';
 
 interface HeroProps {
   onRegisterClick: () => void;
@@ -76,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onRegisterClick, onExploreClick }) =
             >
               <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 bg-black border-2 border-[#FF1744] sticker-shadow-yellow">
                 <img
-                  src="./lost_in_stars_logo.jpg"
+                  src={lostInStarsLogo}
                   alt="Lost in Stars"
                   className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full object-cover shrink-0 border border-[#FF1744]"
                 />

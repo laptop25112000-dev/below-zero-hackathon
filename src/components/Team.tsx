@@ -4,6 +4,8 @@ import { Mail, Globe, CheckCircle2, ShieldCheck, Sparkles, Award } from 'lucide-
 import { TeamMember } from '../types';
 import { easeCinematic, easeSnappy } from '../utils/motion';
 import { playSfx } from '../utils/audio';
+import lostInStarsLogo from '../assets/lost_in_stars_logo.jpg';
+import lostInStarsPoster from '../assets/lost_in_stars_poster.jpg';
 
 export const Team: React.FC = () => {
   const teamMembers: TeamMember[] = [
@@ -88,7 +90,7 @@ export const Team: React.FC = () => {
                   className="relative overflow-hidden group"
                 >
                   <img
-                    src="./lost_in_stars_poster.jpg"
+                    src={lostInStarsPoster}
                     alt="Lost in Stars Official Artwork"
                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -109,7 +111,7 @@ export const Team: React.FC = () => {
               <div className="flex items-center gap-3.5">
                 <div className="w-13 h-13 rounded-full overflow-hidden border-2 border-[#FF1744] shadow-[0_0_15px_rgba(255,23,68,0.5)] shrink-0 bg-black">
                   <img
-                    src="./lost_in_stars_logo.jpg"
+                    src={lostInStarsLogo}
                     alt="Lost in Stars Badge"
                     className="w-full h-full object-cover"
                   />

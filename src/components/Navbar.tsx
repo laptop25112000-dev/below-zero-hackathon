@@ -4,6 +4,7 @@ import { Menu, X, ArrowUpRight, Volume2, VolumeX, Music, Calendar } from 'lucide
 import { isSoundEnabled, toggleSound, playSfx } from '../utils/audio';
 import { ambientMusic } from '../utils/ambientMusic';
 import { SystemTicker } from './SystemTicker';
+import lostInStarsLogo from '../assets/lost_in_stars_logo.jpg';
 
 interface NavbarProps {
   onRegisterClick: () => void;
@@ -124,7 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterClick }) => {
             }`}
           >
             <img
-              src="./lost_in_stars_logo.jpg"
+              src={lostInStarsLogo}
               alt="Lost in Stars Official Logo"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
