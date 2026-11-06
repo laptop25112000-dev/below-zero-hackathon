@@ -1,8 +1,7 @@
 /**
- * Celestial Ambient Music Synthesizer for Below Zero // Lost in Stars
- * Generates an infinitely evolving, lush, soothing space ambient soundscape.
- * Features warm analog chord pads, sub-bass resonance, stereo delay diffusion,
- * and generative starlight bell harmonics in D-major / pentatonic tuning.
+ * Daisy Bell Ambient Music Synthesizer for Below Zero // Lost in Stars.
+ * Uses an original Web Audio arrangement of the public-domain composition,
+ * with warm chord pads, stereo delay diffusion, and a softly voiced melody.
  */
 
 class AmbientMusicEngine {
@@ -18,32 +17,28 @@ class AmbientMusicEngine {
   private sequenceTimer: number | null = null;
   private bellTimer: number | null = null;
   private chordIndex = 0;
+  private melodyIndex = 0;
   private volume = 0.35; // Default soothing volume
   private listeners: ((playing: boolean) => void)[] = [];
 
-  // Musical chords: Warm Dmaj9, Gmaj9, Bm9, Asus4/D (frequencies in Hz)
+  // Warm C-major chord cycle for the Daisy Bell arrangement (frequencies in Hz)
   private chords = [
-    // Dmaj9 (D, F#, A, C#, E)
-    [146.83, 185.0, 220.0, 277.18, 329.63],
-    // Gmaj9 (G, B, D, F#, A)
-    [98.0, 146.83, 185.0, 220.0, 246.94],
-    // Bm9 (B, D, F#, A, C#)
-    [123.47, 146.83, 185.0, 220.0, 277.18],
-    // A6sus4 (A, D, E, F#, A)
-    [110.0, 146.83, 164.81, 185.0, 220.0],
+    // Cmaj7 (C, E, G, B)
+    [130.81, 164.81, 196.0, 246.94],
+    // Fmaj7 (F, A, C, E)
+    [174.61, 220.0, 261.63, 329.63],
+    // G7 (G, B, D, F)
+    [196.0, 246.94, 293.66, 349.23],
+    // C6 (C, E, G, A)
+    [130.81, 164.81, 196.0, 220.0],
   ];
 
-  // High pentatonic starlight chime notes
-  private bellNotes = [
-    293.66, // D4
-    329.63, // E4
-    369.99, // F#4
-    440.0,  // A4
-    493.88, // B4
-    587.33, // D5
-    659.25, // E5
-    739.99, // F#5
-    880.0,  // A5
+  // Gentle lead phrase from Daisy Bell, voiced as original soft synth tones.
+  private melodyNotes = [
+    392.0, 392.0, 440.0, 493.88, 523.25, 493.88, 440.0, 392.0,
+    329.63, 392.0, 440.0, 392.0, 329.63, 0,
+    392.0, 392.0, 440.0, 493.88, 523.25, 587.33, 659.25, 659.25,
+    587.33, 523.25, 493.88, 440.0, 392.0, 0,
   ];
 
   private getAudioContext(): AudioContext | null {
@@ -164,8 +159,9 @@ class AmbientMusicEngine {
       this.playChord(this.chords[this.chordIndex]);
     }, 9000);
 
-    // Schedule gentle starlight bell chiming
-    this.scheduleStarlightBells();
+    // Schedule the soft Daisy Bell lead phrase
+    this.melodyIndex = 0;
+    this.scheduleDaisyMelody();
 
     this.notify();
   }
@@ -269,27 +265,28 @@ class AmbientMusicEngine {
     });
   }
 
-  private scheduleStarlightBells(): void {
+  private scheduleDaisyMelody(): void {
     if (!this.isPlaying) return;
 
-    // Random interval between 2.5 and 5.5 seconds
-    const delay = 2500 + Math.random() * 3000;
+    // Keep the melody sparse and gentle beneath the page content.
+    const delay = 520;
 
     this.bellTimer = window.setTimeout(() => {
       if (!this.isPlaying) return;
 
-      this.playStarlightBell();
-      this.scheduleStarlightBells();
+      this.playDaisyNote(this.melodyNotes[this.melodyIndex]);
+      this.melodyIndex = (this.melodyIndex + 1) % this.melodyNotes.length;
+      this.scheduleDaisyMelody();
     }, delay);
   }
 
-  private playStarlightBell(): void {
+  private playDaisyNote(note: number): void {
     const ctx = this.getAudioContext();
     if (!ctx || !this.filterNode) return;
 
+    if (note === 0) return;
+
     const now = ctx.currentTime;
-    // Choose random note from celestial pentatonic set
-    const note = this.bellNotes[Math.floor(Math.random() * this.bellNotes.length)];
 
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
@@ -298,24 +295,24 @@ class AmbientMusicEngine {
     osc.type = 'sine';
     osc.frequency.setValueAtTime(note, now);
 
-    // Delicate bell envelope: instant soft attack, gentle 3s exponential decay
-    const bellVolume = 0.055;
+    // Delicate lead envelope: instant soft attack, gentle half-second decay
+    const bellVolume = 0.04;
     gain.gain.setValueAtTime(0.001, now);
     gain.gain.linearRampToValueAtTime(bellVolume, now + 0.06);
-    gain.gain.exponentialRampToValueAtTime(0.0001, now + 3.2);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.48);
 
     osc.connect(gain);
     gain.connect(this.filterNode);
 
     osc.start(now);
-    osc.stop(now + 3.3);
+    osc.stop(now + 0.55);
 
     setTimeout(() => {
       try {
         osc.disconnect();
         gain.disconnect();
       } catch {}
-    }, 3400);
+    }, 700);
   }
 
   private stopAllVoices(): void {

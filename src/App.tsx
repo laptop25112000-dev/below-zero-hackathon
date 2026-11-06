@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Manifesto } from './components/Manifesto';
@@ -17,17 +17,30 @@ import { Sponsors } from './components/Sponsors';
 import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
-import { RsvpModal } from './components/RsvpModal';
+import { RsvpModal, RSVP_STORAGE_KEY } from './components/RsvpModal';
 import { PartnerModal } from './components/PartnerModal';
 import { CinematicIntro } from './components/CinematicIntro';
 import { AmbientPlayer } from './components/AmbientPlayer';
 import { CustomCursor } from './components/CustomCursor';
+import { RsvpData } from './types';
 
 export default function App() {
   const [isRsvpOpen, setIsRsvpOpen] = useState(false);
   const [rsvpInitialTrack, setRsvpInitialTrack] = useState('');
   const [isPartnerOpen, setIsPartnerOpen] = useState(false);
   const [introCompleted, setIntroCompleted] = useState(false);
+  const [registeredPass, setRegisteredPass] = useState<RsvpData | null>(null);
+
+  useEffect(() => {
+    const savedPass = localStorage.getItem(RSVP_STORAGE_KEY);
+    if (!savedPass) return;
+
+    try {
+      setRegisteredPass(JSON.parse(savedPass) as RsvpData);
+    } catch {
+      localStorage.removeItem(RSVP_STORAGE_KEY);
+    }
+  }, []);
 
   const handleOpenRsvp = (trackTitle?: string) => {
     if (trackTitle) {
@@ -49,7 +62,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col selection:bg-[#FF1744] selection:text-white relative font-body">
+    <div className="min-h-screen bg-[#F7F5EF] text-[#111111] flex flex-col selection:bg-[#FF1744] selection:text-[#111111] relative font-body">
       {/* Neo-brutalist Interactive Custom Cursor */}
       <CustomCursor />
 
@@ -57,7 +70,11 @@ export default function App() {
       <CinematicIntro onComplete={() => setIntroCompleted(true)} />
 
       {/* Sticky Top Navigation */}
-      <Navbar onRegisterClick={() => handleOpenRsvp()} />
+      <Navbar
+        onRegisterClick={() => handleOpenRsvp()}
+        isRegistered={Boolean(registeredPass)}
+        onPassFinderClick={() => handleOpenRsvp()}
+      />
 
       <main className="flex-grow">
         {/* Hero Section with Countdown Timer and Graphic Showcase */}
@@ -105,6 +122,7 @@ export default function App() {
         isOpen={isRsvpOpen}
         onClose={handleCloseRsvp}
         initialTrack={rsvpInitialTrack}
+        onRegistrationChange={setRegisteredPass}
       />
 
       {/* Partnership Prospectus Request Modal */}

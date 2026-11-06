@@ -40,14 +40,14 @@ export const Team: React.FC = () => {
   ];
 
   return (
-    <section id="team" className="py-24 bg-black border-t-2 border-white relative select-none overflow-hidden">
+    <section id="team" className="py-24 bg-[#F7F5EF] border-t-2 border-black relative select-none overflow-hidden">
       {/* Background Cyber Grid */}
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-cyber-grid" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         
         {/* Header with Track Record Badge */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b-2 border-white/20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b-2 border-black/20">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2.5 h-2.5 bg-[#FF1744]" />
@@ -55,12 +55,12 @@ export const Team: React.FC = () => {
                 06. THE PEOPLE BEHIND THE MISSION
               </span>
             </div>
-            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight uppercase">
+            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl text-[#111111] tracking-tight uppercase">
               ORGANIZED BY <span className="text-[#FFD633]">LOST IN STARS</span>
             </h2>
           </div>
 
-          <div className="bg-black border-2 border-[#FFD633] px-4 py-2 font-mono-tech text-xs text-white sticker-shadow-red self-start md:self-auto flex items-center gap-2">
+          <div className="bg-[#F7F5EF] border-2 border-[#FFD633] px-4 py-2 font-mono-tech text-xs text-[#111111] sticker-shadow-red self-start md:self-auto flex items-center gap-2">
             <Award className="w-4 h-4 text-[#FFD633]" />
             <div>
               <span className="text-[#FFD633] font-black uppercase">PROVEN TRACK RECORD:</span>{' '}
@@ -75,13 +75,13 @@ export const Team: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, ease: easeCinematic }}
-          className="border-2 border-[#FF1744] sticker-shadow-yellow bg-black p-6 sm:p-10 relative overflow-hidden"
+          className="border-2 border-[#FF1744] sticker-shadow-yellow bg-[#F7F5EF] p-6 sm:p-10 relative overflow-hidden"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left: The Official Poster Artwork with Directional Clipping Mask Reveal */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-sm border-2 border-white sticker-shadow-white bg-black p-2.5">
+              <div className="w-full max-w-sm border-2 border-black sticker-shadow-white bg-[#F7F5EF] p-2.5">
                 <motion.div
                   initial={{ clipPath: 'inset(100% 0% 0% 0%)', scale: 1.08 }}
                   whileInView={{ clipPath: 'inset(0% 0% 0% 0%)', scale: 1 }}
@@ -98,7 +98,7 @@ export const Team: React.FC = () => {
                     <span className="font-mono-tech text-[10px] text-[#FFD633] uppercase font-bold tracking-widest block">
                       OFFICIAL POSTER ARTWORK
                     </span>
-                    <span className="font-display text-xs text-white uppercase tracking-wider block mt-0.5">
+                    <span className="font-display text-xs text-[#111111] uppercase tracking-wider block mt-0.5">
                       Lost in Stars Creative Identity
                     </span>
                   </div>
@@ -109,7 +109,7 @@ export const Team: React.FC = () => {
             {/* Right: The Lost in Stars Legacy & Ethos */}
             <div className="lg:col-span-7 space-y-6">
               <div className="flex items-center gap-3.5">
-                <div className="w-13 h-13 rounded-full overflow-hidden border-2 border-[#FF1744] shadow-[0_0_15px_rgba(255,23,68,0.5)] shrink-0 bg-black">
+                <div className="w-13 h-13 rounded-full overflow-hidden border-2 border-[#FF1744] shadow-[0_0_15px_rgba(255,23,68,0.5)] shrink-0 bg-[#F7F5EF]">
                   <img
                     src={lostInStarsLogo}
                     alt="Lost in Stars Badge"
@@ -120,14 +120,14 @@ export const Team: React.FC = () => {
                   <span className="text-xs font-mono-tech font-bold text-[#FFD633] uppercase tracking-wider block">
                     ORIGINAL FOUNDER COLLECTIVE
                   </span>
-                  <h3 className="font-display text-2xl sm:text-3xl text-white uppercase tracking-tight">
+                  <h3 className="font-display text-2xl sm:text-3xl text-[#111111] uppercase tracking-tight">
                     The Lost in Stars Legacy
                   </h3>
                 </div>
               </div>
 
-              <p className="text-sm sm:text-base text-white/85 font-body leading-relaxed">
-                Below Zero is engineered by <strong className="text-white">Lost in Stars</strong>—an independent creative & technology movement dedicated to giving school students a genuine arena to build real, deployable technology. With an uncompromising focus on shipping working software, real-world AI exploration, and fostering student agency, Lost in Stars strips away vanity metrics to put young builders at the center of the frontier.
+              <p className="text-sm sm:text-base text-[#111111]/85 font-body leading-relaxed">
+                Below Zero is engineered by <strong className="text-[#111111]">Lost in Stars</strong>—an independent creative & technology movement dedicated to giving school students a genuine arena to build real, deployable technology. With an uncompromising focus on shipping working software, real-world AI exploration, and fostering student agency, Lost in Stars strips away vanity metrics to put young builders at the center of the frontier.
               </p>
 
               {/* 4 Pillars Grid */}
@@ -138,11 +138,11 @@ export const Team: React.FC = () => {
                   { title: 'High-Caliber Mentorship', desc: 'Active industry engineers and senior researchers' },
                   { title: 'Classes 8–12 Dedicated', desc: 'A safe, inspiring offline environment engineered for youth' },
                 ].map((pillar, i) => (
-                  <div key={i} className="p-3 bg-white/5 border border-white/20 flex items-start gap-2.5">
+                  <div key={i} className="p-3 bg-white/5 border border-black/20 flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#FF1744] shrink-0 mt-0.5" />
                     <div>
-                      <div className="font-heading font-bold text-xs text-white uppercase">{pillar.title}</div>
-                      <div className="font-mono-tech text-[11px] text-white/60">{pillar.desc}</div>
+                      <div className="font-heading font-bold text-xs text-[#111111] uppercase">{pillar.title}</div>
+                      <div className="font-mono-tech text-[11px] text-[#111111]/60">{pillar.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -158,7 +158,7 @@ export const Team: React.FC = () => {
             <span className="font-mono-tech text-xs tracking-widest text-[#FFD633] uppercase font-bold block mb-1">
               MEET THE LEADERSHIP
             </span>
-            <h3 className="font-display text-2xl sm:text-3xl text-white uppercase">
+            <h3 className="font-display text-2xl sm:text-3xl text-[#111111] uppercase">
               STUDENT BUILDERS & ORGANIZERS
             </h3>
           </div>
@@ -175,29 +175,29 @@ export const Team: React.FC = () => {
                   transition={{ duration: 0.55, delay: idx * 0.1, ease: easeSnappy }}
                   whileHover={{ y: -4, x: -2 }}
                   onMouseEnter={() => playSfx('hover')}
-                  className="border-2 border-white bg-black p-6 sticker-shadow-red relative flex flex-col justify-between group transition-transform will-change-transform"
+                  className="border-2 border-black bg-[#F7F5EF] p-6 sticker-shadow-red relative flex flex-col justify-between group transition-transform will-change-transform"
                 >
                   <div>
                     {/* Avatar / Monogram Header */}
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-black border-2 border-[#FF1744] flex items-center justify-center font-display text-base text-white group-hover:bg-[#FF1744] group-hover:text-black transition-colors">
+                      <div className="w-12 h-12 bg-[#F7F5EF] border-2 border-[#FF1744] flex items-center justify-center font-display text-base text-[#111111] group-hover:bg-[#FF1744] group-hover:text-black transition-colors">
                         {member.initials}
                       </div>
                       <span className="text-[#FFD633] text-lg">★</span>
                     </div>
 
-                    <h4 className="font-display text-base sm:text-lg text-white tracking-wide uppercase">
+                    <h4 className="font-display text-base sm:text-lg text-[#111111] tracking-wide uppercase">
                       {member.name}
                     </h4>
                     <div className="font-mono-tech text-xs text-[#FFD633] font-bold tracking-wider uppercase mt-1 mb-3">
                       {member.role}
                     </div>
-                    <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed">
+                    <p className="font-body text-xs sm:text-sm text-[#111111]/75 leading-relaxed">
                       {member.description}
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-4 border-t border-white/20 flex items-center justify-between text-xs font-mono-tech text-white/50">
+                  <div className="pt-4 mt-4 border-t border-black/20 flex items-center justify-between text-xs font-mono-tech text-[#111111]/50">
                     <span>LOST IN STARS</span>
                     <span className="text-[#FF1744]">● ORGANIZER</span>
                   </div>

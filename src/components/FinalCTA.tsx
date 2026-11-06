@@ -45,7 +45,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
       </div>
 
       {/* Top Streetwear Stamp Tape */}
-      <div className="absolute top-0 left-0 right-0 bg-black text-white py-1 px-4 flex items-center justify-between font-mono-tech text-[10px] tracking-widest uppercase border-b-2 border-black z-10">
+      <div className="absolute top-0 left-0 right-0 bg-[#F7F5EF] text-[#111111] py-1 px-4 flex items-center justify-between font-mono-tech text-[10px] tracking-widest uppercase border-b-2 border-black z-10">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#FF1744] animate-ping" />
           <span>[ SPRINT STATUS: ACTIVE ARENA REGISTRATION ]</span>
@@ -59,7 +59,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-6 sm:mt-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-6 sm:mt-4">
         
         {/* Asymmetrical High-Impact Poster Composition */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
@@ -67,7 +67,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
           {/* Left Column: Gigantic Takeover Headline (7 cols) with Scroll Slide */}
           <motion.div style={{ y: titleY }} className="lg:col-span-7 space-y-4 will-change-transform">
             
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white font-mono-tech text-xs tracking-widest uppercase font-bold border-2 border-black sticker-shadow-red">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F7F5EF] text-[#111111] font-mono-tech text-xs tracking-widest uppercase font-bold border-2 border-black sticker-shadow-red">
               <Sparkles className="w-3.5 h-3.5 text-[#FFD633]" />
               <span>THE ARENA AWAITS YOUR CODE</span>
             </div>
@@ -92,36 +92,36 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
             
             {/* Dark Information Box with 3D Tilt */}
             <TiltCard maxTilt={5}>
-              <div className="bg-black text-white p-6 sm:p-7 border-4 border-black sticker-shadow-black space-y-4">
-                <div className="flex items-center justify-between border-b border-white/20 pb-3">
+              <div className="bg-[#F7F5EF] text-[#111111] p-6 sm:p-7 border-4 border-black sticker-shadow-black space-y-4">
+                <div className="flex items-center justify-between border-b border-black/20 pb-3">
                   <span className="font-mono-tech text-xs text-[#FFD633] font-bold uppercase tracking-wider">
                     EVENT SPECIFICATIONS
                   </span>
-                  <span className="font-mono-tech text-[10px] text-white/60">
+                  <span className="font-mono-tech text-[10px] text-[#111111]/60">
                     100% IN-PERSON
                   </span>
                 </div>
 
-                <div className="space-y-2 font-mono-tech text-xs sm:text-sm text-white/90">
+                <div className="space-y-2 font-mono-tech text-xs sm:text-sm text-[#111111]/90">
                   <div className="flex items-center justify-between">
-                    <span className="text-white/60">DATE</span>
+                    <span className="text-[#111111]/60">DATE</span>
                     <span className="font-bold text-[#FFD633]">MID NOVEMBER 2026</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-white/60">SPRINT DURATION</span>
+                    <span className="text-[#111111]/60">SPRINT DURATION</span>
                     <span className="font-bold text-[#FF1744]">24 NON-STOP HOURS</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-white/60">STUDENT ELIGIBILITY</span>
-                    <span className="font-bold text-white">CLASSES 8–12</span>
+                    <span className="text-[#111111]/60">STUDENT ELIGIBILITY</span>
+                    <span className="font-bold text-[#111111]">CLASSES 8–12</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-white/60">LOCATION</span>
-                    <span className="font-bold text-white">DELHI NCR ARENA</span>
+                    <span className="text-[#111111]/60">LOCATION</span>
+                    <span className="font-bold text-[#111111]">DELHI NCR ARENA</span>
                   </div>
                 </div>
 
-                <p className="font-body text-xs sm:text-sm text-white/80 leading-relaxed pt-2 border-t border-white/10">
+                <p className="font-body text-xs sm:text-sm text-[#111111]/80 leading-relaxed pt-2 border-t border-black/10">
                   Your unfinished experiments, wild AI prototypes, and boldest hypotheses start here. Assemble your squad or register solo.
                 </p>
               </div>
@@ -138,7 +138,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
                   onRegisterClick();
                 }}
                 onMouseEnter={() => playSfx('hover')}
-                className="w-full min-h-[56px] bg-black hover:bg-[#FF1744] text-white font-display text-sm sm:text-base tracking-wider px-8 py-4 border-4 border-black sticker-shadow-black transition-colors cursor-pointer flex items-center justify-center gap-3 group"
+                className="w-full min-h-[56px] bg-[#F7F5EF] hover:bg-[#FF1744] text-[#111111] font-display text-sm sm:text-base tracking-wider px-8 py-4 border-4 border-black sticker-shadow-black transition-colors cursor-pointer flex items-center justify-center gap-3 group"
               >
                 <span>REGISTER YOUR INTEREST</span>
                 <ArrowRight className="w-5 h-5 stroke-[3] group-hover:translate-x-2 transition-transform duration-200" />
@@ -152,13 +152,13 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
                   href="mailto:official.lostinstars@gmail.com?subject=BELOW%20ZERO%20INQUIRY"
                   onMouseEnter={() => playSfx('hover')}
                   onClick={() => playSfx('click')}
-                  className="flex-1 min-h-[46px] bg-white hover:bg-black hover:text-white text-black font-mono-tech font-bold text-xs tracking-wider px-4 py-3 border-3 border-black sticker-shadow-black transition-colors cursor-pointer flex items-center justify-center gap-2"
+                  className="flex-1 min-h-[46px] bg-white hover:bg-[#F7F5EF] hover:text-[#111111] text-black font-mono-tech font-bold text-xs tracking-wider px-4 py-3 border-3 border-black sticker-shadow-black transition-colors cursor-pointer flex items-center justify-center gap-2"
                 >
                   <Terminal className="w-3.5 h-3.5" />
                   <span>CONTACT ORGANIZERS</span>
                 </motion.a>
 
-                <div className="hidden sm:flex items-center justify-center px-4 py-2 bg-black/10 border-2 border-black font-mono-tech text-[10px] text-black font-bold uppercase tracking-widest">
+                <div className="hidden sm:flex items-center justify-center px-4 py-2 bg-[#F7F5EF]/10 border-2 border-black font-mono-tech text-[10px] text-black font-bold uppercase tracking-widest">
                   LOST IN STARS // 2026
                 </div>
               </div>
@@ -171,7 +171,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
         {/* Bottom Graphic Marquee Strip inside Yellow takeover */}
         <div className="mt-14 pt-6 border-t-3 border-black flex flex-wrap items-center justify-between gap-4 font-mono-tech text-xs tracking-widest uppercase font-extrabold text-black">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 bg-black rotate-45" />
+            <span className="w-2.5 h-2.5 bg-[#F7F5EF] rotate-45" />
             <span>LOST IN STARS PRESENTS BELOW ZERO</span>
           </div>
           <div className="flex items-center gap-3">

@@ -114,23 +114,23 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
     <section
       ref={containerRef}
       id="tracks"
-      className="py-16 sm:py-24 bg-black relative select-none overflow-hidden border-b-2 border-white/20 w-full max-w-[100vw]"
+      className="py-16 sm:py-24 bg-[#F7F5EF] relative select-none overflow-hidden border-b-2 border-black/20 w-full max-w-[100vw]"
     >
       {/* Background Cyber Grid */}
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-cyber-grid" />
 
       {/* Giant Background Typography Watermark Faded in Background */}
       <div className="absolute top-1/4 -right-12 pointer-events-none select-none opacity-[0.035] leading-none z-0 hidden sm:block">
-        <span className="font-display text-[26vw] block text-white">ARENAS</span>
+        <span className="font-display text-[26vw] block text-[#111111]">ARENAS</span>
       </div>
       <div className="absolute bottom-10 -left-12 pointer-events-none select-none opacity-[0.035] leading-none z-0 hidden sm:block">
-        <span className="font-display text-[22vw] block text-white">01-05</span>
+        <span className="font-display text-[22vw] block text-[#111111]">01-05</span>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Asymmetrical Anchor Header Composition */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end mb-12 sm:mb-16 pb-8 sm:pb-10 border-b-2 border-white/20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end mb-12 sm:mb-16 pb-8 sm:pb-10 border-b-2 border-black/20">
           
           {/* Left Column: Stacked Big Typography Anchor */}
           <div className="lg:col-span-7">
@@ -142,7 +142,7 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
             </div>
 
             <div className="border-l-4 border-[#FF1744] pl-3.5 sm:pl-6 space-y-1">
-              <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white leading-[0.92]">
+              <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-[#111111] leading-[0.92]">
                 <CinematicTextReveal delay={0.05}>
                   <span className="block">CHOOSE</span>
                 </CinematicTextReveal>
@@ -158,16 +158,16 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
 
           {/* Right Column: Integrated Description & Telemetry Metadata */}
           <div className="lg:col-span-5 space-y-3 sm:space-y-4">
-            <div className="p-3.5 sm:p-4 border-2 border-white/20 bg-black/80 sticker-shadow-white">
-              <p className="font-body text-xs sm:text-base text-white/90 leading-relaxed">
+            <div className="p-3.5 sm:p-4 border-2 border-black/20 bg-[#F7F5EF]/80 sticker-shadow-white">
+              <p className="font-body text-xs sm:text-base text-[#111111]/90 leading-relaxed">
                 Choose a domain that excites you, collaborate with your team, and build working production software. As you scroll, explore each arena's technical toolchain and evaluation rubric.
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-[11px] sm:text-xs font-mono-tech text-white/60">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-[11px] sm:text-xs font-mono-tech text-[#111111]/60">
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-[#FFD633] animate-pulse" />
-                <span className="text-white font-bold">5 SPECIALIZED TRACKS</span>
+                <span className="text-[#111111] font-bold">5 SPECIALIZED TRACKS</span>
               </div>
               <span>·</span>
               <span>24 HOURS CODE</span>
@@ -179,7 +179,7 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
         </div>
 
         {/* Interactive Arena Rail (Desktop Navigation Aid) */}
-        <div className="hidden lg:flex items-center justify-between border-2 border-white/20 bg-black/90 p-2.5 mb-10 sticker-shadow-white relative z-20">
+        <div className="hidden lg:flex items-center justify-between border-2 border-black/20 bg-[#F7F5EF]/90 p-2.5 mb-10 sticker-shadow-white relative z-20">
           <div className="flex items-center gap-2 pl-2">
             <span className="w-2 h-2 rounded-full bg-[#FF1744] animate-ping" />
             <span className="font-mono-tech text-[10px] text-[#FFD633] uppercase font-bold tracking-widest">
@@ -198,11 +198,11 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
                   }}
                   className={`px-3 py-1 font-mono-tech text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
                     isCur
-                      ? 'bg-[#FF1744] text-white sticker-shadow-yellow'
-                      : 'text-white/60 hover:text-white border border-white/10 hover:border-white/40'
+                      ? 'bg-[#FF1744] text-[#111111] sticker-shadow-yellow'
+                      : 'text-[#111111]/60 hover:text-[#111111] border border-black/10 hover:border-black/40'
                   }`}
                 >
-                  <span className={isCur ? 'text-[#FFD633]' : 'text-white/40'}>{t.number}</span>
+                  <span className={isCur ? 'text-[#FFD633]' : 'text-[#111111]/40'}>{t.number}</span>
                   <span>{t.title}</span>
                 </button>
               );
@@ -353,14 +353,14 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: easeSnappy }}
-              className="border-3 sm:border-4 border-[#FFD633] bg-black p-4 sm:p-8 sticker-shadow-red relative"
+              className="border-3 sm:border-4 border-[#FFD633] bg-[#F7F5EF] p-4 sm:p-8 sticker-shadow-red relative"
             >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 border-b-2 border-white/20 pb-4 mb-5 sm:mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 border-b-2 border-black/20 pb-4 mb-5 sm:mb-6">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-                  <span className="bg-[#FF1744] text-white font-mono-tech font-bold text-[10px] sm:text-xs px-2.5 py-1">
+                  <span className="bg-[#FF1744] text-[#111111] font-mono-tech font-bold text-[10px] sm:text-xs px-2.5 py-1">
                     SELECTED ARENA
                   </span>
-                  <h3 className="font-display text-lg sm:text-2xl text-white">
+                  <h3 className="font-display text-lg sm:text-2xl text-[#111111]">
                     ARENA {activeTrack.number} — {activeTrack.title}
                   </h3>
                 </div>
@@ -379,11 +379,11 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                 {/* Focus Sub-Domains */}
-                <div className="border border-white/20 p-3.5 sm:p-4 bg-black">
+                <div className="border border-black/20 p-3.5 sm:p-4 bg-[#F7F5EF]">
                   <div className="font-mono-tech text-[11px] sm:text-xs text-[#FFD633] font-bold uppercase tracking-wider mb-2">
                     FOCUS SUB-DOMAINS
                   </div>
-                  <ul className="space-y-1.5 font-body text-xs sm:text-sm text-white/90">
+                  <ul className="space-y-1.5 font-body text-xs sm:text-sm text-[#111111]/90">
                     {activeTrack.focusAreas.map((area, i) => (
                       <li key={i} className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 bg-[#FF1744] shrink-0" />
@@ -394,20 +394,20 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
                 </div>
 
                 {/* Sample Build Inspiration */}
-                <div className="border border-white/20 p-3.5 sm:p-4 bg-black">
+                <div className="border border-black/20 p-3.5 sm:p-4 bg-[#F7F5EF]">
                   <div className="font-mono-tech text-[11px] sm:text-xs text-[#FFD633] font-bold uppercase tracking-wider mb-2">
                     SAMPLE INSPIRATION
                   </div>
-                  <p className="font-body text-xs sm:text-sm text-white/85 leading-relaxed">
+                  <p className="font-body text-xs sm:text-sm text-[#111111]/85 leading-relaxed">
                     "{activeTrack.sampleProject}"
                   </p>
-                  <div className="font-mono-tech text-[10px] text-white/50 mt-2.5">
+                  <div className="font-mono-tech text-[10px] text-[#111111]/50 mt-2.5">
                     * Teams are free to propose novel problems outside this sample.
                   </div>
                 </div>
 
                 {/* Recommended Toolchains */}
-                <div className="border border-white/20 p-3.5 sm:p-4 bg-black">
+                <div className="border border-black/20 p-3.5 sm:p-4 bg-[#F7F5EF]">
                   <div className="font-mono-tech text-[11px] sm:text-xs text-[#FFD633] font-bold uppercase tracking-wider mb-2">
                     RECOMMENDED TOOLCHAINS
                   </div>
@@ -415,7 +415,7 @@ export const Tracks: React.FC<TracksProps> = ({ onSelectTrackForRsvp }) => {
                     {activeTrack.tools.map((tool, i) => (
                       <span
                         key={i}
-                        className="border border-white/40 text-white font-mono-tech text-[10px] sm:text-xs px-2 py-0.5 sm:px-2.5 sm:py-1"
+                        className="border border-black/40 text-[#111111] font-mono-tech text-[10px] sm:text-xs px-2 py-0.5 sm:px-2.5 sm:py-1"
                       >
                         {tool}
                       </span>
@@ -465,8 +465,8 @@ const ArenaCard: React.FC<ArenaCardProps> = ({
 
   const getShadowClass = () => {
     if (isSelected || isHovered) return 'sticker-shadow-red border-[#FF1744]';
-    if (badgeColor === 'yellow') return 'sticker-shadow-yellow border-white/50 hover:border-[#FFD633]';
-    return 'sticker-shadow-white border-white/50 hover:border-white';
+    if (badgeColor === 'yellow') return 'sticker-shadow-yellow border-black/50 hover:border-[#FFD633]';
+    return 'sticker-shadow-white border-black/50 hover:border-black';
   };
 
   const initialX = direction === 'left' ? -35 : direction === 'right' ? 35 : 0;
@@ -490,17 +490,17 @@ const ArenaCard: React.FC<ArenaCardProps> = ({
           scale: isSelected || isHovered ? 1.015 : 1,
         }}
         transition={{ duration: 0.5, ease: easeSnappy }}
-        className={`cursor-pointer border-2 bg-black p-4 sm:p-7 relative transition-all duration-300 select-none overflow-hidden will-change-transform ${getShadowClass()} ${className}`}
+        className={`cursor-pointer border-2 bg-[#F7F5EF] p-4 sm:p-7 relative transition-all duration-300 select-none overflow-hidden will-change-transform ${getShadowClass()} ${className}`}
       >
       {/* Top Bar: Oversized Track Number + Arena Icon + Selection Status */}
-      <div className="flex items-start justify-between border-b-2 border-white/20 pb-3 sm:pb-4 mb-3 sm:mb-4">
+      <div className="flex items-start justify-between border-b-2 border-black/20 pb-3 sm:pb-4 mb-3 sm:mb-4">
         <div className="flex items-baseline gap-2.5 sm:gap-3">
           <span className="font-mono-tech text-[10px] sm:text-xs font-bold text-[#FF1744] tracking-widest uppercase">
             ARENA
           </span>
           <span
             className={`font-display text-3xl sm:text-5xl tracking-tighter transition-colors ${
-              isHovered || isSelected ? 'text-[#FFD633]' : 'text-white'
+              isHovered || isSelected ? 'text-[#FFD633]' : 'text-[#111111]'
             }`}
           >
             {track.number}
@@ -511,8 +511,8 @@ const ArenaCard: React.FC<ArenaCardProps> = ({
           <div
             className={`w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center border transition-colors ${
               isHovered || isSelected
-                ? 'bg-[#FF1744] text-white border-black shadow-[2px_2px_0px_#FFD633]'
-                : 'bg-black text-white border-white/40'
+                ? 'bg-[#FF1744] text-[#111111] border-black shadow-[2px_2px_0px_#FFD633]'
+                : 'bg-[#F7F5EF] text-[#111111] border-black/40'
             }`}
           >
             <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -520,7 +520,7 @@ const ArenaCard: React.FC<ArenaCardProps> = ({
 
           <div
             className={`p-1.5 border transition-transform ${
-              isHovered || isSelected ? 'translate-x-0.5 -translate-y-0.5 text-[#FFD633] border-[#FFD633]' : 'text-white/50 border-white/20'
+              isHovered || isSelected ? 'translate-x-0.5 -translate-y-0.5 text-[#FFD633] border-[#FFD633]' : 'text-[#111111]/50 border-black/20'
             }`}
           >
             <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
@@ -533,12 +533,12 @@ const ArenaCard: React.FC<ArenaCardProps> = ({
         <div className="font-mono-tech text-[10px] sm:text-xs text-[#FFD633] uppercase font-bold tracking-wider">
           {track.tagline}
         </div>
-        <h3 className="font-display text-xl sm:text-2xl lg:text-3xl text-white tracking-wide uppercase leading-tight">
+        <h3 className="font-display text-xl sm:text-2xl lg:text-3xl text-[#111111] tracking-wide uppercase leading-tight">
           {track.title}
         </h3>
       </div>
 
-      <p className="font-body text-xs sm:text-sm text-white/80 leading-relaxed mb-4">
+      <p className="font-body text-xs sm:text-sm text-[#111111]/80 leading-relaxed mb-4">
         {track.description}
       </p>
 
@@ -547,7 +547,7 @@ const ArenaCard: React.FC<ArenaCardProps> = ({
         {track.focusAreas.slice(0, 3).map((area, i) => (
           <span
             key={i}
-            className="text-[9px] sm:text-[10px] font-mono-tech text-white/70 bg-white/5 px-2 py-0.5 border border-white/10"
+            className="text-[9px] sm:text-[10px] font-mono-tech text-[#111111]/70 bg-white/5 px-2 py-0.5 border border-black/10"
           >
             {area}
           </span>
@@ -555,8 +555,8 @@ const ArenaCard: React.FC<ArenaCardProps> = ({
       </div>
 
       {/* Footer Strip with Touch-Friendly Action Trigger */}
-      <div className="pt-2.5 sm:pt-3 border-t border-white/15 flex items-center justify-between font-mono-tech text-xs">
-        <span className={isSelected || isHovered ? 'text-[#FFD633] font-bold text-[11px] sm:text-xs' : 'text-white/50 text-[11px] sm:text-xs'}>
+      <div className="pt-2.5 sm:pt-3 border-t border-black/15 flex items-center justify-between font-mono-tech text-xs">
+        <span className={isSelected || isHovered ? 'text-[#FFD633] font-bold text-[11px] sm:text-xs' : 'text-[#111111]/50 text-[11px] sm:text-xs'}>
           {isSelected ? 'ARENA IN FOCUS' : 'TAP TO INSPECT'}
         </span>
         <button
@@ -564,7 +564,7 @@ const ArenaCard: React.FC<ArenaCardProps> = ({
             e.stopPropagation();
             onRsvp();
           }}
-          className="min-h-[38px] px-2 text-[11px] font-bold text-white hover:text-[#FF1744] underline decoration-[#FF1744] underline-offset-2 flex items-center gap-1 cursor-pointer active:scale-95"
+          className="min-h-[38px] px-2 text-[11px] font-bold text-[#111111] hover:text-[#FF1744] underline decoration-[#FF1744] underline-offset-2 flex items-center gap-1 cursor-pointer active:scale-95"
         >
           <span>RSVP ARENA</span>
           <span>→</span>

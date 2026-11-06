@@ -105,7 +105,7 @@ export const AmbientPlayer: React.FC = () => {
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className="absolute bottom-full right-0 mb-3 w-64 bg-black border-2 border-[#FFD633] sticker-shadow-red p-3 pointer-events-auto"
+            className="absolute bottom-full right-0 mb-3 w-64 bg-[#F7F5EF] border-2 border-[#FFD633] sticker-shadow-red p-3 pointer-events-auto"
           >
             <div className="flex items-center gap-2 mb-1">
               <Sparkles className="w-3.5 h-3.5 text-[#FFD633] animate-pulse" />
@@ -113,8 +113,8 @@ export const AmbientPlayer: React.FC = () => {
                 IMMERSIVE SOUNDSCAPE
               </span>
             </div>
-            <p className="font-heading text-xs text-white/90 leading-tight">
-              Tap play below to start the soothing celestial space music while you explore.
+            <p className="font-heading text-xs text-[#111111]/90 leading-tight">
+              Tap play below to start the gentle Daisy Bell synth arrangement while you explore.
             </p>
             <button
               onClick={handleToggle}
@@ -128,7 +128,7 @@ export const AmbientPlayer: React.FC = () => {
       </AnimatePresence>
 
       {/* Main Ambient Player Capsule */}
-      <div className="bg-black/95 backdrop-blur-md border-2 border-white sticker-shadow-yellow overflow-hidden transition-all duration-300">
+      <div className="bg-[#F7F5EF]/95 backdrop-blur-md border-2 border-black sticker-shadow-yellow overflow-hidden transition-all duration-300">
         
         {/* Compact Bar */}
         <div className="flex items-center gap-3 px-3 py-2">
@@ -138,7 +138,7 @@ export const AmbientPlayer: React.FC = () => {
             aria-label={isPlaying ? 'Pause ambient music' : 'Play ambient music'}
             className={`w-9 h-9 flex items-center justify-center border-2 transition-all cursor-pointer ${
               isPlaying
-                ? 'bg-[#FF1744] text-white border-black shadow-[2px_2px_0px_#FFD633]'
+                ? 'bg-[#FF1744] text-[#111111] border-black shadow-[2px_2px_0px_#FFD633]'
                 : 'bg-[#FFD633] text-black border-black hover:bg-white shadow-[2px_2px_0px_#FFFFFF]'
             }`}
           >
@@ -153,17 +153,17 @@ export const AmbientPlayer: React.FC = () => {
           <div className="flex flex-col cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
             <div className="flex items-center gap-1.5">
               <span className={`w-1.5 h-1.5 rounded-full ${isPlaying ? 'bg-[#FF1744] animate-ping' : 'bg-white/40'}`} />
-              <span className="font-mono-tech text-[9px] text-white/60 uppercase tracking-widest">
+              <span className="font-mono-tech text-[9px] text-[#111111]/60 uppercase tracking-widest">
                 {isPlaying ? 'PLAYING NOW' : 'AMBIENT SOUND'}
               </span>
             </div>
-            <div className="font-display text-xs text-white uppercase tracking-wider flex items-center gap-1.5">
-              <span>CELESTIAL HARMONICS</span>
+            <div className="font-display text-xs text-[#111111] uppercase tracking-wider flex items-center gap-1.5">
+              <span>DAISY BELL // SYNTH ARRANGEMENT</span>
             </div>
           </div>
 
           {/* Real-time Equalizer Waveform Canvas */}
-          <div className="w-16 h-7 bg-black border border-white/20 flex items-center justify-center px-1">
+          <div className="w-16 h-7 bg-[#F7F5EF] border border-black/20 flex items-center justify-center px-1">
             <canvas ref={canvasRef} width={64} height={24} className="w-full h-full" />
           </div>
 
@@ -171,7 +171,7 @@ export const AmbientPlayer: React.FC = () => {
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             aria-label="Toggle music player options"
-            className="p-1 text-white/60 hover:text-white transition-colors cursor-pointer"
+            className="p-1 text-[#111111]/60 hover:text-[#111111] transition-colors cursor-pointer"
           >
             {isExpanded ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
           </button>
@@ -185,12 +185,12 @@ export const AmbientPlayer: React.FC = () => {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="border-t border-white/20 px-3.5 py-2.5 bg-black/90 space-y-2"
+              className="border-t border-black/20 px-3.5 py-2.5 bg-[#F7F5EF]/90 space-y-2"
             >
               {/* Volume Slider */}
               <div className="flex items-center gap-2.5">
                 {volume === 0 ? (
-                  <VolumeX className="w-3.5 h-3.5 text-white/50 shrink-0" />
+                  <VolumeX className="w-3.5 h-3.5 text-[#111111]/50 shrink-0" />
                 ) : (
                   <Volume2 className="w-3.5 h-3.5 text-[#FFD633] shrink-0" />
                 )}
@@ -204,15 +204,15 @@ export const AmbientPlayer: React.FC = () => {
                   className="w-full h-1 bg-white/20 accent-[#FF1744] cursor-pointer"
                   aria-label="Ambient volume"
                 />
-                <span className="font-mono-tech text-[10px] text-white/60 w-8 text-right">
+                <span className="font-mono-tech text-[10px] text-[#111111]/60 w-8 text-right">
                   {Math.round(volume * 100)}%
                 </span>
               </div>
 
               {/* Subtitle description */}
-              <div className="flex items-center justify-between text-[9px] font-mono-tech text-white/50 pt-1 border-t border-white/10">
-                <span>WARM ANALOG PADS & STAR BELLS</span>
-                <span className="text-[#FFD633]">D-MAJ 432Hz</span>
+              <div className="flex items-center justify-between text-[9px] font-mono-tech text-[#111111]/50 pt-1 border-t border-black/10">
+                <span>WARM PADS & SOFT MELODY</span>
+                <span className="text-[#FFD633]">C-MAJOR // PUBLIC DOMAIN</span>
               </div>
             </motion.div>
           )}

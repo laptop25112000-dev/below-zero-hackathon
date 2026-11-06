@@ -127,13 +127,13 @@ export const Judging: React.FC = () => {
   const IconComponent = current.icon;
 
   return (
-    <section id="judging" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-black border-b-2 border-white select-none overflow-hidden">
+    <section id="judging" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-[#F7F5EF] border-b-2 border-black select-none overflow-hidden">
       {/* Background Cyber Grid */}
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-cyber-grid" />
 
-      <div className="max-w-7xl mx-auto relative z-10 space-y-12">
+      <div className="max-w-6xl mx-auto relative z-10 space-y-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b-2 border-white/20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b-2 border-black/20">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2.5 h-2.5 bg-[#FF1744]" />
@@ -141,11 +141,11 @@ export const Judging: React.FC = () => {
                 05. TRANSPARENT EVALUATION
               </span>
             </div>
-            <h2 className="font-display text-3xl sm:text-5xl text-white tracking-tight uppercase">
+            <h2 className="font-display text-3xl sm:text-5xl text-[#111111] tracking-tight uppercase">
               JUDGING <span className="text-[#FFD633]">PHILOSOPHY</span> & RUBRIC
             </h2>
           </div>
-          <p className="max-w-md text-xs sm:text-sm text-white/70 font-mono-tech leading-relaxed">
+          <p className="max-w-md text-xs sm:text-sm text-[#111111]/70 font-mono-tech leading-relaxed">
             Every team is evaluated across 6 transparent criteria during their live demo. Zero favoritism, zero slide-deck theater, 100% merit-based engineering.
           </p>
         </div>
@@ -172,24 +172,24 @@ export const Judging: React.FC = () => {
                   className={`p-4 border-2 cursor-pointer transition-all duration-200 select-none ${
                     isSelected
                       ? 'border-[#FF1744] bg-[#FF1744]/10 sticker-shadow-yellow -translate-y-1'
-                      : 'border-white/30 bg-black/80 hover:border-white'
+                      : 'border-black/30 bg-[#F7F5EF]/80 hover:border-black'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-3">
                     <div className={`w-8 h-8 flex items-center justify-center border ${
-                      isSelected ? 'border-[#FF1744] bg-[#FF1744] text-white' : 'border-white/40 bg-black text-[#FFD633]'
+                      isSelected ? 'border-[#FF1744] bg-[#FF1744] text-[#111111]' : 'border-black/40 bg-[#F7F5EF] text-[#FFD633]'
                     }`}>
                       <ItemIcon className="w-4 h-4" />
                     </div>
-                    <span className="font-mono-tech text-xs font-black px-2 py-0.5 bg-black border border-white/40 text-[#FFD633]">
+                    <span className="font-mono-tech text-xs font-black px-2 py-0.5 bg-[#F7F5EF] border border-black/40 text-[#FFD633]">
                       WEIGHT: {item.weight}
                     </span>
                   </div>
 
-                  <div className="font-mono-tech text-[10px] text-white/50 tracking-wider">
+                  <div className="font-mono-tech text-[10px] text-[#111111]/50 tracking-wider">
                     CRITERION {item.num}
                   </div>
-                  <h3 className="font-heading font-bold text-sm sm:text-base text-white tracking-wide mt-0.5 uppercase">
+                  <h3 className="font-heading font-bold text-sm sm:text-base text-[#111111] tracking-wide mt-0.5 uppercase">
                     {item.title}
                   </h3>
                 </motion.div>
@@ -206,58 +206,58 @@ export const Judging: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.35, ease: easeSnappy }}
-                className="border-2 border-[#FFD633] bg-black p-6 sm:p-8 sticker-shadow-red relative space-y-6"
+                className="border-2 border-[#FFD633] bg-[#F7F5EF] p-6 sm:p-8 sticker-shadow-red relative space-y-6"
               >
                 {/* Header of Detail Pane */}
-                <div className="flex items-center justify-between border-b-2 border-white/20 pb-4">
+                <div className="flex items-center justify-between border-b-2 border-black/20 pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-[#FF1744] text-white flex items-center justify-center border border-black shadow-[2px_2px_0px_#FFFFFF]">
+                    <div className="w-10 h-10 bg-[#FF1744] text-[#111111] flex items-center justify-center border border-black shadow-[2px_2px_0px_#FFFFFF]">
                       <IconComponent className="w-5 h-5" />
                     </div>
                     <div>
                       <span className="font-mono-tech text-[10px] uppercase tracking-wider text-[#FFD633] block font-bold">
                         RUBRIC CRITERION {current.num}
                       </span>
-                      <h4 className="font-display text-xl sm:text-2xl text-white uppercase">
+                      <h4 className="font-display text-xl sm:text-2xl text-[#111111] uppercase">
                         {current.title}
                       </h4>
                     </div>
                   </div>
-                  <span className="px-3 py-1 bg-black border-2 border-[#FFD633] text-[#FFD633] font-mono-tech font-black text-sm">
+                  <span className="px-3 py-1 bg-[#F7F5EF] border-2 border-[#FFD633] text-[#FFD633] font-mono-tech font-black text-sm">
                     {current.weight}
                   </span>
                 </div>
 
                 {/* Core Evaluative Question */}
                 <div className="space-y-1.5">
-                  <div className="font-mono-tech text-[11px] uppercase tracking-wider text-white/60 flex items-center gap-1.5">
+                  <div className="font-mono-tech text-[11px] uppercase tracking-wider text-[#111111]/60 flex items-center gap-1.5">
                     <HelpCircle className="w-3.5 h-3.5 text-[#FF1744]" />
                     <span>Core Evaluative Question</span>
                   </div>
-                  <p className="text-sm sm:text-base font-heading font-semibold text-white bg-white/5 p-3.5 border-l-4 border-[#FF1744]">
+                  <p className="text-sm sm:text-base font-heading font-semibold text-[#111111] bg-white/5 p-3.5 border-l-4 border-[#FF1744]">
                     "{current.question}"
                   </p>
                 </div>
 
                 {/* What Judges Look For */}
                 <div className="space-y-1.5">
-                  <div className="font-mono-tech text-[11px] uppercase tracking-wider text-white/60 flex items-center gap-1.5">
+                  <div className="font-mono-tech text-[11px] uppercase tracking-wider text-[#111111]/60 flex items-center gap-1.5">
                     <Eye className="w-3.5 h-3.5 text-[#FFD633]" />
                     <span>What Judges Look For</span>
                   </div>
-                  <p className="text-xs sm:text-sm text-white/80 font-body leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#111111]/80 font-body leading-relaxed">
                     {current.details}
                   </p>
                 </div>
 
                 {/* Key Checklist Rubric */}
-                <div className="space-y-2 pt-2 border-t border-white/10">
+                <div className="space-y-2 pt-2 border-t border-black/10">
                   <div className="font-mono-tech text-[10px] uppercase tracking-widest text-[#FFD633] font-bold">
                     SPECIFIC BENCHMARKS
                   </div>
                   <div className="space-y-1.5">
                     {current.rubric.map((point, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs font-mono-tech text-white/90">
+                      <div key={i} className="flex items-start gap-2 text-xs font-mono-tech text-[#111111]/90">
                         <span className="text-[#FF1744] font-bold">▶</span>
                         <span>{point}</span>
                       </div>
@@ -271,7 +271,7 @@ export const Judging: React.FC = () => {
                     <Flame className="w-4 h-4 text-[#FF1744]" />
                     <span>Pro Tip for Student Builders</span>
                   </div>
-                  <p className="text-xs text-white/90 font-mono-tech leading-relaxed">
+                  <p className="text-xs text-[#111111]/90 font-mono-tech leading-relaxed">
                     {current.proTip}
                   </p>
                 </div>

@@ -34,21 +34,21 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose }) =
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm overflow-y-auto"
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#F7F5EF]/85 backdrop-blur-sm overflow-y-auto"
       >
         <motion.div
           initial={{ scale: 0.93, y: 20 }}
           animate={{ scale: 1, y: 0 }}
           exit={{ scale: 0.93, y: 20 }}
           transition={{ duration: 0.35, ease: easeSnappy }}
-          className="relative w-full max-w-xl bg-black border-2 border-white sticker-shadow-red my-8 overflow-hidden"
+          className="relative w-full max-w-xl bg-[#F7F5EF] border-2 border-black sticker-shadow-red my-8 overflow-hidden"
         >
           {/* Header */}
-          <div className="flex items-center justify-between border-b-2 border-white px-5 py-4 bg-black">
+          <div className="flex items-center justify-between border-b-2 border-black px-5 py-4 bg-[#F7F5EF]">
             <div className="flex items-center gap-3">
               <LostInStarsEmblem size={30} />
               <div>
-                <div className="font-display text-sm tracking-wider text-white">
+                <div className="font-display text-sm tracking-wider text-[#111111]">
                   PARTNER WITH BELOW ZERO
                 </div>
                 <div className="font-mono-tech text-[10px] text-[#FFD633] uppercase">
@@ -60,7 +60,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose }) =
               whileTap={{ scale: 0.9 }}
               onClick={onClose}
               aria-label="Close modal"
-              className="p-1 text-white hover:text-[#FF1744] border border-white/20 cursor-pointer"
+              className="p-1 text-[#111111] hover:text-[#FF1744] border border-black/20 cursor-pointer"
             >
               <X className="w-5 h-5" />
             </motion.button>
@@ -75,10 +75,10 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose }) =
                 className="space-y-4 text-center py-6"
               >
                 <CheckCircle className="w-12 h-12 text-[#FFD633] mx-auto animate-pulse" />
-                <h3 className="font-display text-xl text-white uppercase">
+                <h3 className="font-display text-xl text-[#111111] uppercase">
                   INQUIRY RECEIVED
                 </h3>
-                <p className="font-body text-sm text-white/80 max-w-md mx-auto">
+                <p className="font-body text-sm text-[#111111]/80 max-w-md mx-auto">
                   Thank you for supporting student innovation! Our partnership leads (Mahima & Mayank) will reach out to <strong className="text-[#FFD633]">{partnerForm.email}</strong> with the Below Zero sponsorship prospectus.
                 </p>
                 <div className="pt-4">
@@ -95,7 +95,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose }) =
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block font-mono-tech text-xs text-white uppercase tracking-wider mb-1.5">
+                  <label className="block font-mono-tech text-xs text-[#111111] uppercase tracking-wider mb-1.5">
                     Organization / Company Name <span className="text-[#FF1744]">*</span>
                   </label>
                   <input
@@ -104,13 +104,13 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose }) =
                     value={partnerForm.orgName}
                     onChange={(e) => setPartnerForm({ ...partnerForm, orgName: e.target.value })}
                     placeholder="e.g. Acme Tech Labs / Community Org"
-                    className="w-full bg-black border border-white/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-white font-body"
+                    className="w-full bg-[#F7F5EF] border border-black/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-[#111111] font-body"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block font-mono-tech text-xs text-white uppercase tracking-wider mb-1.5">
+                    <label className="block font-mono-tech text-xs text-[#111111] uppercase tracking-wider mb-1.5">
                       Contact Person
                     </label>
                     <input
@@ -118,11 +118,11 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose }) =
                       value={partnerForm.contactName}
                       onChange={(e) => setPartnerForm({ ...partnerForm, contactName: e.target.value })}
                       placeholder="e.g. Priya Sharma"
-                      className="w-full bg-black border border-white/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-white font-body"
+                      className="w-full bg-[#F7F5EF] border border-black/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-[#111111] font-body"
                     />
                   </div>
                   <div>
-                    <label className="block font-mono-tech text-xs text-white uppercase tracking-wider mb-1.5">
+                    <label className="block font-mono-tech text-xs text-[#111111] uppercase tracking-wider mb-1.5">
                       Official Email <span className="text-[#FF1744]">*</span>
                     </label>
                     <input
@@ -131,19 +131,19 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose }) =
                       value={partnerForm.email}
                       onChange={(e) => setPartnerForm({ ...partnerForm, email: e.target.value })}
                       placeholder="contact@acme.org"
-                      className="w-full bg-black border border-white/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-white font-body"
+                      className="w-full bg-[#F7F5EF] border border-black/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-[#111111] font-body"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block font-mono-tech text-xs text-white uppercase tracking-wider mb-1.5">
+                  <label className="block font-mono-tech text-xs text-[#111111] uppercase tracking-wider mb-1.5">
                     Interested Partnership Tier
                   </label>
                   <select
                     value={partnerForm.tier}
                     onChange={(e) => setPartnerForm({ ...partnerForm, tier: e.target.value })}
-                    className="w-full bg-black border border-white/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-white font-body"
+                    className="w-full bg-[#F7F5EF] border border-black/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-[#111111] font-body"
                   >
                     <option value="Title Partner">Title Partner (Co-host)</option>
                     <option value="Technical Infrastructure">Technical Infrastructure (Tooling & APIs)</option>
@@ -154,7 +154,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose }) =
                 </div>
 
                 <div>
-                  <label className="block font-mono-tech text-xs text-white uppercase tracking-wider mb-1.5">
+                  <label className="block font-mono-tech text-xs text-[#111111] uppercase tracking-wider mb-1.5">
                     Note / Preferred Support
                   </label>
                   <textarea
@@ -162,7 +162,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose }) =
                     value={partnerForm.message}
                     onChange={(e) => setPartnerForm({ ...partnerForm, message: e.target.value })}
                     placeholder="Share details on how you'd like to collaborate..."
-                    className="w-full bg-black border border-white/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-white font-body resize-none"
+                    className="w-full bg-[#F7F5EF] border border-black/40 focus:border-[#FF1744] focus:outline-none p-3 text-sm text-[#111111] font-body resize-none"
                   />
                 </div>
 

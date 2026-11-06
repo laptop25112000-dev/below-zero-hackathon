@@ -41,11 +41,11 @@ export const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 bg-black border-b-2 border-white/20 relative select-none overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-24 bg-[#F7F5EF] border-b-2 border-black/20 relative select-none overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b-2 border-white/20 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b-2 border-black/20 pb-8">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2.5 h-2.5 bg-[#FF1744]" />
@@ -53,13 +53,13 @@ export const Experience: React.FC = () => {
                 04. THE ARENA EXPERIENCE
               </span>
             </div>
-            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight">
+            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl text-[#111111] uppercase tracking-tight">
               MORE THAN A HACKATHON. <br />
               <span className="text-[#FF1744]">AN ENGINE FOR TALENT.</span>
             </h2>
           </div>
 
-          <p className="max-w-md text-sm sm:text-base text-white/80 font-body leading-relaxed">
+          <p className="max-w-md text-sm sm:text-base text-[#111111]/80 font-body leading-relaxed">
             Engineered from the ground up to eliminate startup fluff. Below Zero gives school students a genuine arena with real tools, real mentors, and high-caliber peers.
           </p>
         </div>
@@ -74,21 +74,21 @@ export const Experience: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.65, ease: easeCinematic }}
-              className="border-4 border-white bg-black p-6 sm:p-8 sticker-shadow-red relative"
+              className="border-4 border-black bg-[#F7F5EF] p-6 sm:p-8 sticker-shadow-red relative"
             >
               <div className="font-mono-tech text-xs text-[#FFD633] font-bold uppercase tracking-widest mb-3">
                 ARENA SPECIFICATIONS
               </div>
 
-              <h3 className="font-display text-2xl sm:text-3xl text-white uppercase leading-tight mb-4">
+              <h3 className="font-display text-2xl sm:text-3xl text-[#111111] uppercase leading-tight mb-4">
                 BUILT SPECIFICALLY FOR SCHOOL HACKERS
               </h3>
 
-              <p className="font-body text-sm text-white/80 leading-relaxed mb-6">
+              <p className="font-body text-sm text-[#111111]/80 leading-relaxed mb-6">
                 Most hackathons treat high schoolers as an afterthought. Below Zero puts students in Classes 8–12 at the center of the engineering arena with the same tooling, expectations, and respect given to top university hackathons.
               </p>
 
-              <div className="space-y-3 pt-4 border-t-2 border-white/20">
+              <div className="space-y-3 pt-4 border-t-2 border-black/20">
                 {[
                   { icon: ShieldCheck, label: '100% Free Entry For Accepted Teams' },
                   { icon: Coffee, label: 'Fuel, Meals & Beverages Provided' },
@@ -97,7 +97,7 @@ export const Experience: React.FC = () => {
                 ].map((item, i) => {
                   const ItemIcon = item.icon;
                   return (
-                    <div key={i} className="flex items-center gap-3 text-xs sm:text-sm font-mono-tech text-white">
+                    <div key={i} className="flex items-center gap-3 text-xs sm:text-sm font-mono-tech text-[#111111]">
                       <ItemIcon className="w-4 h-4 text-[#FF1744] shrink-0" />
                       <span>{item.label}</span>
                     </div>
@@ -117,7 +117,7 @@ export const Experience: React.FC = () => {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.55, delay: idx * 0.1, ease: easeSnappy }}
                 onMouseEnter={() => playSfx('hover')}
-                className="p-6 border-2 border-white/30 hover:border-white bg-black transition-colors sticker-shadow-white relative group"
+                className="p-6 border-2 border-black/30 hover:border-black bg-[#F7F5EF] transition-colors sticker-shadow-white relative group"
               >
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                   {/* Oversized Number & Tag */}
@@ -132,10 +132,10 @@ export const Experience: React.FC = () => {
 
                   {/* Body Content */}
                   <div className="space-y-2 flex-grow">
-                    <h4 className="font-heading font-black text-lg sm:text-xl text-white uppercase tracking-tight">
+                    <h4 className="font-heading font-black text-lg sm:text-xl text-[#111111] uppercase tracking-tight">
                       {exp.title}
                     </h4>
-                    <p className="font-body text-xs sm:text-sm text-white/80 leading-relaxed">
+                    <p className="font-body text-xs sm:text-sm text-[#111111]/80 leading-relaxed">
                       {exp.description}
                     </p>
                     <div className="pt-2 flex items-center gap-2 text-xs font-mono-tech text-[#FFD633]">

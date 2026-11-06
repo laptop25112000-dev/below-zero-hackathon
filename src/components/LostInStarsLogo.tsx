@@ -15,7 +15,7 @@ export const LostInStarsEmblem: React.FC<{ size?: number; className?: string }> 
   return (
     <div
       style={{ width: size, height: size }}
-      className={`relative shrink-0 rounded-full overflow-hidden border-2 border-[#FF1744] shadow-[0_0_18px_rgba(255,23,68,0.45)] bg-black group select-none ${className}`}
+      className={`relative shrink-0 rounded-full overflow-hidden border-2 border-[#FF1744] shadow-[0_0_18px_rgba(255,23,68,0.45)] bg-[#F7F5EF] group select-none ${className}`}
     >
       <img
         src={lostInStarsLogo}
@@ -24,7 +24,7 @@ export const LostInStarsEmblem: React.FC<{ size?: number; className?: string }> 
         loading="eager"
       />
       {/* Subtle glass reflection ring */}
-      <div className="absolute inset-0 rounded-full border border-white/25 pointer-events-none" />
+      <div className="absolute inset-0 rounded-full border border-black/25 pointer-events-none" />
     </div>
   );
 };
@@ -42,7 +42,7 @@ export const LostInStarsLogo: React.FC<LogoProps> = ({
       {showText && (
         <div className="flex flex-col leading-none">
           <div className="flex items-center gap-1.5">
-            <span className="font-display text-sm tracking-widest text-white uppercase">
+            <span className="font-display text-sm tracking-widest text-[#111111] uppercase">
               LOST IN STARS
             </span>
             <span className="inline-block w-1.5 h-1.5 bg-[#FF1744] rotate-45 animate-pulse"></span>
@@ -161,7 +161,7 @@ export const HeroOrbitalGraphic: React.FC<{ className?: string }> = ({ className
 
       {/* Central Core: The Official Lost in Stars Circular Emblem */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="relative w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-[#FF1744] shadow-[0_0_50px_rgba(255,23,68,0.55)] bg-black z-20 pointer-events-auto group">
+        <div className="relative w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-[#FF1744] shadow-[0_0_50px_rgba(255,23,68,0.55)] bg-[#F7F5EF] z-20 pointer-events-auto group">
           <img
             src={lostInStarsLogo}
             alt="Lost in Stars Official Logo"
@@ -169,26 +169,26 @@ export const HeroOrbitalGraphic: React.FC<{ className?: string }> = ({ className
           />
           {/* Pulsing radar ping around the core */}
           <div className="absolute inset-0 rounded-full border-2 border-[#FFD633] animate-ping opacity-25 pointer-events-none" />
-          <div className="absolute inset-0 rounded-full border border-white/30 pointer-events-none" />
+          <div className="absolute inset-0 rounded-full border border-black/30 pointer-events-none" />
         </div>
       </div>
 
       {/* Floating Sticker Stamp Top-Right with Organic Float */}
-      <div className="absolute -top-4 -right-4 sm:top-2 sm:right-2 bg-black border-2 border-[#FF1744] sticker-shadow-red px-3 py-1.5 rotate-6 z-30 animate-float">
+      <div className="absolute -top-4 -right-4 sm:top-2 sm:right-2 bg-[#F7F5EF] border-2 border-[#FF1744] sticker-shadow-red px-3 py-1.5 rotate-6 z-30 animate-float">
         <span className="font-display text-xs text-[#FFD633] tracking-wider block">
           LOST IN STARS
         </span>
-        <span className="font-mono-tech text-[9px] text-white tracking-widest block">
+        <span className="font-mono-tech text-[9px] text-[#111111] tracking-widest block">
           MID-NOV 2026
         </span>
       </div>
 
       {/* Floating Sticker Stamp Bottom-Left with Reverse Float */}
-      <div className="absolute -bottom-4 -left-4 sm:bottom-4 sm:left-2 bg-black border-2 border-white sticker-shadow-white px-3 py-1.5 -rotate-3 z-30 animate-float-reverse">
+      <div className="absolute -bottom-4 -left-4 sm:bottom-4 sm:left-2 bg-[#F7F5EF] border-2 border-black sticker-shadow-white px-3 py-1.5 -rotate-3 z-30 animate-float-reverse">
         <span className="font-mono-tech text-[10px] text-[#FF1744] font-bold tracking-widest block">
           24H // CLASSES 8–12
         </span>
-        <span className="font-display text-xs text-white tracking-wider block">
+        <span className="font-display text-xs text-[#111111] tracking-wider block">
           STUDENT HACKATHON
         </span>
       </div>
@@ -198,7 +198,7 @@ export const HeroOrbitalGraphic: React.FC<{ className?: string }> = ({ className
 
 export const LostInStarsPosterCard: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
-    <div className={`w-full max-w-sm border-2 border-[#FF1744] sticker-shadow-yellow bg-black p-2.5 select-none ${className}`}>
+    <div className={`w-full max-w-sm border-2 border-[#FF1744] sticker-shadow-yellow bg-[#F7F5EF] p-2.5 select-none ${className}`}>
       <div className="relative overflow-hidden group">
         <img
           src={lostInStarsPoster}
@@ -209,7 +209,7 @@ export const LostInStarsPosterCard: React.FC<{ className?: string }> = ({ classN
           <span className="font-mono-tech text-[10px] text-[#FFD633] uppercase font-bold tracking-widest block">
             OFFICIAL ARTWORK
           </span>
-          <span className="font-display text-xs text-white uppercase tracking-wider block mt-0.5">
+          <span className="font-display text-xs text-[#111111] uppercase tracking-wider block mt-0.5">
             LOST IN STARS // BELOW ZERO
           </span>
         </div>

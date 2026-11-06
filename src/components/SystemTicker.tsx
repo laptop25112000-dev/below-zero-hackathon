@@ -22,7 +22,7 @@ export const SystemTicker: React.FC = () => {
 
   return (
     <div
-      className="w-full bg-[#FF1744] text-white border-b-2 border-black overflow-hidden select-none py-1.5 shadow-[0_2px_10px_rgba(255,23,68,0.4)]"
+      className="w-full bg-[#FF1744] text-[#111111] border-b-2 border-black overflow-hidden select-none py-1.5 shadow-[0_2px_10px_rgba(255,23,68,0.4)]"
       aria-label="Event Highlights Ticker"
     >
       <div className="flex items-center whitespace-nowrap overflow-hidden">
@@ -44,7 +44,7 @@ export const SystemTicker: React.FC = () => {
           {/* First loop instance */}
           {tickerItems.map((item, i) => (
             <React.Fragment key={`ticker-1-${i}`}>
-              <span className="inline-flex items-center gap-1.5 px-3 sm:px-4 text-white hover:text-[#FFD633] transition-colors">
+              <span className="inline-flex items-center gap-1.5 px-3 sm:px-4 text-[#111111] hover:text-[#FFD633] transition-colors">
                 <span className="w-1.5 h-1.5 bg-[#FFD633] rounded-full inline-block animate-pulse" />
                 <span>{item}</span>
               </span>
@@ -55,7 +55,7 @@ export const SystemTicker: React.FC = () => {
           {/* Duplicate instance for seamless infinite looping */}
           {tickerItems.map((item, i) => (
             <React.Fragment key={`ticker-2-${i}`}>
-              <span className="inline-flex items-center gap-1.5 px-3 sm:px-4 text-white hover:text-[#FFD633] transition-colors">
+              <span className="inline-flex items-center gap-1.5 px-3 sm:px-4 text-[#111111] hover:text-[#FFD633] transition-colors">
                 <span className="w-1.5 h-1.5 bg-[#FFD633] rounded-full inline-block animate-pulse" />
                 <span>{item}</span>
               </span>

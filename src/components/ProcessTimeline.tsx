@@ -93,20 +93,20 @@ export const ProcessTimeline: React.FC = () => {
     <section
       ref={containerRef}
       id="process"
-      className="py-16 sm:py-24 bg-black border-b-2 border-white/20 relative select-none overflow-hidden"
+      className="py-16 sm:py-24 bg-[#F7F5EF] border-b-2 border-black/20 relative select-none overflow-hidden"
     >
       {/* Background Cyber Grid */}
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-cyber-grid" />
 
       {/* Giant Typography Background Drift */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 pointer-events-none select-none opacity-[0.03] leading-none z-0 hidden sm:block">
-        <span className="font-display text-[26vw] block text-white">24-HOUR SPRINT</span>
+        <span className="font-display text-[26vw] block text-[#111111]">24-HOUR SPRINT</span>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header with 24-Hour Counter */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16 pb-8 border-b-2 border-white/20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16 pb-8 border-b-2 border-black/20">
           <div>
             <div className="flex items-center gap-2 mb-2 sm:mb-3">
               <span className="w-2.5 h-2.5 bg-[#FF1744] rotate-45 shrink-0" />
@@ -114,19 +114,19 @@ export const ProcessTimeline: React.FC = () => {
                 03. THE 24-HOUR SPRINT TIMELINE
               </span>
             </div>
-            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight leading-tight">
+            <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl text-[#111111] uppercase tracking-tight leading-tight">
               FROM FIRST THOUGHT <br />
               <span className="text-[#FF1744]">TO LIVE DEMO.</span>
             </h2>
           </div>
 
-          <div className="bg-black border-2 border-[#FFD633] px-4 py-3 sticker-shadow-red self-start md:self-auto flex items-center gap-3">
+          <div className="bg-[#F7F5EF] border-2 border-[#FFD633] px-4 py-3 sticker-shadow-red self-start md:self-auto flex items-center gap-3">
             <Clock className="w-5 h-5 text-[#FFD633]" />
             <div>
-              <span className="font-mono-tech text-[10px] text-white/70 block uppercase font-bold">
+              <span className="font-mono-tech text-[10px] text-[#111111]/70 block uppercase font-bold">
                 NON-STOP TIME BUDGET
               </span>
-              <div className="font-display text-xl sm:text-2xl text-white">
+              <div className="font-display text-xl sm:text-2xl text-[#111111]">
                 <AnimatedNumber value={24} suffix=" HOURS" />
               </div>
             </div>
@@ -160,10 +160,10 @@ export const ProcessTimeline: React.FC = () => {
                     setActiveStage(idx);
                   }}
                   onMouseEnter={() => playSfx('hover')}
-                  className={`cursor-pointer border-2 bg-black p-4 sm:p-5 relative transition-all duration-200 ${
+                  className={`cursor-pointer border-2 bg-[#F7F5EF] p-4 sm:p-5 relative transition-all duration-200 ${
                     isSelected
                       ? 'border-[#FF1744] sticker-shadow-yellow -translate-y-1'
-                      : 'border-white/30 hover:border-white sticker-shadow-white'
+                      : 'border-black/30 hover:border-black sticker-shadow-white'
                   }`}
                 >
                   {/* Stage Node Header with Node Motif */}
@@ -172,23 +172,23 @@ export const ProcessTimeline: React.FC = () => {
                       <div
                         className={`w-7 h-7 flex items-center justify-center border font-display text-xs ${
                           isSelected
-                            ? 'bg-[#FF1744] text-white border-black shadow-[1px_1px_0px_#FFD633]'
-                            : 'bg-black text-[#FFD633] border-white/40'
+                            ? 'bg-[#FF1744] text-[#111111] border-black shadow-[1px_1px_0px_#FFD633]'
+                            : 'bg-[#F7F5EF] text-[#FFD633] border-black/40'
                         }`}
                       >
                         {stage.num}
                       </div>
-                      <span className="font-mono-tech text-[10px] text-white/60 tracking-wider">
+                      <span className="font-mono-tech text-[10px] text-[#111111]/60 tracking-wider">
                         {stage.motif}
                       </span>
                     </div>
 
-                    <div className="font-mono-tech text-[10px] font-bold text-[#FFD633] px-2 py-0.5 border border-white/20 bg-white/5">
+                    <div className="font-mono-tech text-[10px] font-bold text-[#FFD633] px-2 py-0.5 border border-black/20 bg-white/5">
                       {stage.timeframe}
                     </div>
                   </div>
 
-                  <h3 className="font-display text-xl sm:text-2xl text-white tracking-wide uppercase">
+                  <h3 className="font-display text-xl sm:text-2xl text-[#111111] tracking-wide uppercase">
                     {stage.title}
                   </h3>
 
@@ -196,15 +196,15 @@ export const ProcessTimeline: React.FC = () => {
                     {stage.tagline}
                   </div>
 
-                  <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed mb-4">
+                  <p className="font-body text-xs sm:text-sm text-[#111111]/75 leading-relaxed mb-4">
                     {stage.description}
                   </p>
 
-                  <div className="pt-2.5 border-t border-white/20 flex items-center justify-between text-xs font-mono-tech">
-                    <span className={isSelected ? 'text-[#FFD633] font-bold' : 'text-white/50'}>
+                  <div className="pt-2.5 border-t border-black/20 flex items-center justify-between text-xs font-mono-tech">
+                    <span className={isSelected ? 'text-[#FFD633] font-bold' : 'text-[#111111]/50'}>
                       {isSelected ? 'ACTIVE PHASE' : 'STAGE MILESTONE'}
                     </span>
-                    <span className="text-white/40">▸</span>
+                    <span className="text-[#111111]/40">▸</span>
                   </div>
                 </motion.div>
               );
@@ -220,14 +220,14 @@ export const ProcessTimeline: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.35, ease: easeCinematic }}
-            className="border-2 border-white bg-black p-5 sm:p-7 sticker-shadow-white relative"
+            className="border-2 border-black bg-[#F7F5EF] p-5 sm:p-7 sticker-shadow-white relative"
           >
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/20 pb-4 mb-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-black/20 pb-4 mb-4">
               <div className="flex items-center gap-3">
                 <span className="px-2.5 py-1 bg-[#FFD633] text-black font-mono-tech font-black text-xs">
                   {current.motif} TIME BLOCK
                 </span>
-                <span className="font-display text-lg sm:text-xl text-white">
+                <span className="font-display text-lg sm:text-xl text-[#111111]">
                   MILESTONE DELIVERABLES // STAGE {current.num}
                 </span>
               </div>
@@ -240,7 +240,7 @@ export const ProcessTimeline: React.FC = () => {
               {current.deliverables.map((item, idx) => (
                 <div
                   key={idx}
-                  className="border border-white/20 p-3 bg-white/5 flex items-center gap-2.5 font-mono-tech text-xs text-white"
+                  className="border border-black/20 p-3 bg-white/5 flex items-center gap-2.5 font-mono-tech text-xs text-[#111111]"
                 >
                   <span className="w-1.5 h-1.5 bg-[#FF1744] shrink-0" />
                   <span>{item}</span>

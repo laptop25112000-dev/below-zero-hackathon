@@ -120,7 +120,7 @@ export const CustomCursor: React.FC = () => {
             {/* Center solid precision dot */}
             <div className="w-2.5 h-2.5 bg-[#FF1744] border border-black shadow-[1px_1px_0px_#FFFFFF]" />
             {/* Inner crosshair notch */}
-            <div className="absolute w-5 h-5 border border-white/60 pointer-events-none" />
+            <div className="absolute w-5 h-5 border border-black/60 pointer-events-none" />
           </div>
         )}
 
@@ -131,7 +131,7 @@ export const CustomCursor: React.FC = () => {
             transition={{ type: 'spring', stiffness: 500, damping: 25 }}
             className="w-10 h-10 border-2 border-[#FFD633] bg-[#FF1744] flex items-center justify-center sticker-shadow-black"
           >
-            <div className="w-2 h-2 bg-black" />
+            <div className="w-2 h-2 bg-[#F7F5EF]" />
           </motion.div>
         )}
 
@@ -140,7 +140,7 @@ export const CustomCursor: React.FC = () => {
             initial={{ scale: 0.7 }}
             animate={{ scale: 1 }}
             transition={{ type: 'spring', stiffness: 450, damping: 22 }}
-            className="px-3 py-1 border-2 border-[#FF1744] bg-black sticker-shadow-yellow flex items-center gap-1.5"
+            className="px-3 py-1 border-2 border-[#FF1744] bg-[#F7F5EF] sticker-shadow-yellow flex items-center gap-1.5"
           >
             <span className="w-1.5 h-1.5 bg-[#FF1744] animate-ping" />
             <span className="font-mono-tech text-[10px] font-bold uppercase tracking-widest text-[#FFD633]">

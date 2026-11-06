@@ -67,7 +67,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onComplete }) =>
       {phase !== 'exit' ? (
         <motion.div
           key="intro-screen"
-          className="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center select-none overflow-hidden"
+          className="fixed inset-0 z-50 bg-[#F7F5EF] flex flex-col items-center justify-center select-none overflow-hidden"
           exit={{
             y: '-100%',
             transition: { duration: 0.75, ease: [0.77, 0, 0.175, 1] },
@@ -84,7 +84,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onComplete }) =>
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="absolute top-8 left-8 right-8 flex items-center justify-between font-mono-tech text-[11px] text-white/70"
+            className="absolute top-8 left-8 right-8 flex items-center justify-between font-mono-tech text-[11px] text-[#111111]/70"
           >
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-[#FF1744] inline-block animate-ping"></span>
@@ -93,7 +93,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onComplete }) =>
             </div>
             <button
               onClick={handleSkip}
-              className="text-white/60 hover:text-white border border-white/20 hover:border-white px-2 py-0.5 tracking-wider transition-colors cursor-pointer"
+              className="text-[#111111]/60 hover:text-[#111111] border border-black/20 hover:border-black px-2 py-0.5 tracking-wider transition-colors cursor-pointer"
             >
               SKIP [ESC]
             </button>
@@ -140,7 +140,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onComplete }) =>
                 initial={{ y: '110%' }}
                 animate={{ y: '0%' }}
                 transition={{ duration: 0.6, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="font-display text-5xl sm:text-7xl md:text-8xl tracking-tight text-white uppercase drop-shadow-[4px_4px_0_#FF1744]"
+                className="font-display text-5xl sm:text-7xl md:text-8xl tracking-tight text-[#111111] uppercase drop-shadow-[4px_4px_0_#FF1744]"
               >
                 BELOW ZERO
               </motion.h1>
@@ -151,7 +151,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onComplete }) =>
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.8 }}
-              className="mt-3 font-heading text-sm sm:text-base font-semibold text-white/80"
+              className="mt-3 font-heading text-sm sm:text-base font-semibold text-[#111111]/80"
             >
               Lost Ideas, <span className="text-[#FF1744]">Found Innovation.</span>
             </motion.div>
@@ -162,7 +162,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onComplete }) =>
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.6 }}
-            className="absolute bottom-8 left-8 right-8 flex items-center justify-between font-mono-tech text-[10px] text-white/50"
+            className="absolute bottom-8 left-8 right-8 flex items-center justify-between font-mono-tech text-[10px] text-[#111111]/50"
           >
             <span>MID-NOV 2026 // 24-HOUR SPRINT</span>
             <span className="text-[#FFD633]">READY TO BUILD</span>

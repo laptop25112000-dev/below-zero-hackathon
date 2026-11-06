@@ -57,22 +57,22 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-24 bg-black border-b-2 border-white/20 relative select-none overflow-hidden">
+    <section id="faq" className="py-24 bg-[#F7F5EF] border-b-2 border-black/20 relative select-none overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="mb-14 border-b-2 border-white/20 pb-8">
+        <div className="mb-14 border-b-2 border-black/20 pb-8">
           <div className="flex items-center gap-2 mb-3">
             <span className="w-2.5 h-2.5 bg-[#FF1744]" />
             <span className="font-mono-tech text-xs tracking-[0.25em] text-[#FFD633] uppercase font-bold">
               08. FREQUENTLY ASKED QUESTIONS
             </span>
           </div>
-          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight mb-4">
+          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl text-[#111111] uppercase tracking-tight mb-4">
             EVERYTHING YOU NEED <br />
             <span className="text-[#FFD633]">TO KNOW.</span>
           </h2>
-          <p className="font-body text-sm sm:text-base text-white/80 leading-relaxed">
+          <p className="font-body text-sm sm:text-base text-[#111111]/80 leading-relaxed">
             Got questions about the format, eligibility, or rules? Find quick answers below or reach out directly to the Lost in Stars team.
           </p>
         </div>
@@ -88,8 +88,8 @@ export const FAQ: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.05, ease: easeSnappy }}
-                className={`border-2 transition-all duration-200 bg-black ${
-                  isOpen ? 'border-[#FF1744] sticker-shadow-red' : 'border-white/30 hover:border-white'
+                className={`border-2 transition-all duration-200 bg-[#F7F5EF] ${
+                  isOpen ? 'border-[#FF1744] sticker-shadow-red' : 'border-black/30 hover:border-black'
                 }`}
               >
                 <button
@@ -97,12 +97,12 @@ export const FAQ: React.FC = () => {
                   onClick={() => toggleIndex(idx)}
                   className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
                 >
-                  <span className="font-heading font-bold text-base sm:text-lg text-white">
+                  <span className="font-heading font-bold text-base sm:text-lg text-[#111111]">
                     {faq.question}
                   </span>
                   <div
                     className={`w-8 h-8 shrink-0 flex items-center justify-center border transition-colors ${
-                      isOpen ? 'bg-[#FF1744] text-white border-black' : 'border-white/40 text-white'
+                      isOpen ? 'bg-[#FF1744] text-[#111111] border-black' : 'border-black/40 text-[#111111]'
                     }`}
                   >
                     {isOpen ? <Minus className="w-4 h-4 stroke-[3]" /> : <Plus className="w-4 h-4 stroke-[3]" />}
@@ -118,7 +118,7 @@ export const FAQ: React.FC = () => {
                       transition={{ duration: 0.3, ease: easeCinematic }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base font-body text-white/80 leading-relaxed border-t border-white/10">
+                      <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base font-body text-[#111111]/80 leading-relaxed border-t border-black/10">
                         {faq.answer}
                       </div>
                     </motion.div>

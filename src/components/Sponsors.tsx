@@ -47,7 +47,7 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
       scope: 'Sponsor high school participation grants, prototyping hardware kits, student awards, and educational resource stipends for underprivileged innovators.',
       deliverables: ['Hardware Grants', 'Student Stipends', 'Award Support', 'School Outreach'],
       icon: Shield,
-      accent: 'border-white text-white',
+      accent: 'border-black text-[#111111]',
     },
     {
       num: '04',
@@ -64,17 +64,17 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
     <section
       ref={containerRef}
       id="sponsors"
-      className="py-16 sm:py-24 bg-black border-b-2 border-white/20 relative select-none overflow-hidden w-full max-w-[100vw]"
+      className="py-16 sm:py-24 bg-[#F7F5EF] border-b-2 border-black/20 relative select-none overflow-hidden w-full max-w-[100vw]"
     >
       {/* Background Cyber Grid */}
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-cyber-grid" />
 
       {/* Giant Background Typography Watermark */}
       <div className="absolute top-1/3 -left-12 pointer-events-none select-none opacity-[0.03] leading-none z-0 hidden sm:block">
-        <span className="font-display text-[26vw] block text-white">ALLIES</span>
+        <span className="font-display text-[26vw] block text-[#111111]">ALLIES</span>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* 1. Section Header & Label */}
         <div className="flex items-center gap-3 mb-8 sm:mb-12">
@@ -83,7 +83,7 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
             07. PARTNERSHIPS & ALLIANCES
           </span>
           <div className="h-px flex-grow bg-white/20" />
-          <span className="font-mono-tech text-[10px] text-white/50 tracking-widest uppercase hidden sm:inline-block">
+          <span className="font-mono-tech text-[10px] text-[#111111]/50 tracking-widest uppercase hidden sm:inline-block">
             CO-HOST & EMPOWER
           </span>
         </div>
@@ -91,8 +91,8 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
         {/* 2. Asymmetric Editorial Headline Composition */}
         <div className="space-y-6 sm:space-y-8 mb-12 sm:mb-16">
           <div className="border-l-4 border-[#FF1744] pl-4 sm:pl-8 space-y-2">
-            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tight text-white leading-[0.92]">
-              <span className="block text-white">PARTNERSHIP</span>
+            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tight text-[#111111] leading-[0.92]">
+              <span className="block text-[#111111]">PARTNERSHIP</span>
               <span className="block text-[#FFD633]">/ COLLABORATE.</span>
             </h2>
 
@@ -103,13 +103,13 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
 
           {/* Large Editorial Statement */}
           <div className="max-w-4xl">
-            <h3 className="font-heading font-black text-2xl sm:text-4xl lg:text-5xl text-white leading-tight uppercase tracking-tight">
+            <h3 className="font-heading font-black text-2xl sm:text-4xl lg:text-5xl text-[#111111] leading-tight uppercase tracking-tight">
               BUILD SOMETHING MEANINGFUL WITH THE{' '}
               <span className="text-[#FF1744] underline decoration-[#FFD633] decoration-4 underline-offset-4">
                 NEXT GENERATION OF CREATORS.
               </span>
             </h3>
-            <p className="font-body text-sm sm:text-lg text-white/80 leading-relaxed mt-4">
+            <p className="font-body text-sm sm:text-lg text-[#111111]/80 leading-relaxed mt-4">
               We welcome organizations, developer toolchains, educational pioneers, and tech brands committed to equipping young student engineers in Classes 8–12. Partner with Lost in Stars to directly mentor, resource, and inspire 300+ selected builders.
             </p>
           </div>
@@ -129,7 +129,7 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
           
           {/* Left Column: Direct Alliance Invitation Card (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="border-4 border-white bg-black p-6 sm:p-8 sticker-shadow-red relative">
+            <div className="border-4 border-black bg-[#F7F5EF] p-6 sm:p-8 sticker-shadow-red relative">
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-2 h-2 rounded-full bg-[#FF1744] animate-ping" />
                 <span className="font-mono-tech text-xs text-[#FFD633] font-bold uppercase tracking-widest">
@@ -137,22 +137,22 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
                 </span>
               </div>
 
-              <h4 className="font-display text-2xl sm:text-3xl text-white uppercase leading-tight mb-4">
+              <h4 className="font-display text-2xl sm:text-3xl text-[#111111] uppercase leading-tight mb-4">
                 WHY SPONSOR BELOW ZERO?
               </h4>
 
-              <p className="font-body text-xs sm:text-sm text-white/85 leading-relaxed mb-6">
+              <p className="font-body text-xs sm:text-sm text-[#111111]/85 leading-relaxed mb-6">
                 Below Zero is 100% free for student builders. Your sponsorship directly underwrites high-speed hardware connectivity, wholesome meals, compute quotas, cash awards, and certified credentials.
               </p>
 
-              <div className="space-y-3 pt-4 border-t-2 border-white/20 font-mono-tech text-xs text-white/80 mb-6">
+              <div className="space-y-3 pt-4 border-t-2 border-black/20 font-mono-tech text-xs text-[#111111]/80 mb-6">
                 <div className="flex items-center justify-between">
                   <span>TARGET PARTICIPANTS</span>
                   <span className="text-[#FFD633] font-bold">300+ STUDENTS</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>ELIGIBILITY FOCUS</span>
-                  <span className="text-white font-bold">CLASSES 8–12</span>
+                  <span className="text-[#111111] font-bold">CLASSES 8–12</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>IN-PERSON LOCATION</span>
@@ -180,7 +180,7 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
                 <ArrowUpRight className="w-4 h-4 stroke-[3] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </motion.button>
 
-              <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-[11px] font-mono-tech text-white/60">
+              <div className="mt-4 pt-4 border-t border-black/10 flex items-center justify-between text-[11px] font-mono-tech text-[#111111]/60">
                 <a
                   href="mailto:official.lostinstars@gmail.com?subject=BELOW%20ZERO%20PARTNERSHIP"
                   className="hover:text-[#FFD633] underline decoration-[#FFD633] flex items-center gap-1.5"
@@ -204,13 +204,13 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.5, delay: idx * 0.1, ease: easeSnappy }}
                   onMouseEnter={() => playSfx('hover')}
-                  className="border-2 border-white/40 hover:border-white bg-black p-5 sm:p-6 transition-all duration-200 sticker-shadow-white relative group"
+                  className="border-2 border-black/40 hover:border-black bg-[#F7F5EF] p-5 sm:p-6 transition-all duration-200 sticker-shadow-white relative group"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                     {/* Header: Number & Role */}
                     <div className="space-y-1">
                       <div className="flex items-center gap-2.5">
-                        <span className="font-display text-2xl sm:text-3xl text-white group-hover:text-[#FFD633] transition-colors">
+                        <span className="font-display text-2xl sm:text-3xl text-[#111111] group-hover:text-[#FFD633] transition-colors">
                           {pillar.num}
                         </span>
                         <span className={`font-mono-tech text-[10px] sm:text-xs font-bold px-2 py-0.5 border ${pillar.accent}`}>
@@ -218,27 +218,27 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
                         </span>
                       </div>
 
-                      <h4 className="font-heading font-black text-lg sm:text-xl text-white uppercase tracking-tight">
+                      <h4 className="font-heading font-black text-lg sm:text-xl text-[#111111] uppercase tracking-tight">
                         {pillar.role}
                       </h4>
                     </div>
 
-                    <div className="w-10 h-10 border border-white/20 bg-white/5 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 border border-black/20 bg-white/5 flex items-center justify-center shrink-0">
                       <IconComp className="w-5 h-5 text-[#FFD633]" />
                     </div>
                   </div>
 
-                  <p className="font-body text-xs sm:text-sm text-white/80 leading-relaxed my-3.5">
+                  <p className="font-body text-xs sm:text-sm text-[#111111]/80 leading-relaxed my-3.5">
                     {pillar.scope}
                   </p>
 
                   {/* Deliverables Tags */}
-                  <div className="pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2 font-mono-tech text-xs">
+                  <div className="pt-3 border-t border-black/15 flex flex-wrap items-center justify-between gap-2 font-mono-tech text-xs">
                     <div className="flex flex-wrap gap-1.5">
                       {pillar.deliverables.map((item, i) => (
                         <span
                           key={i}
-                          className="text-[10px] text-white/70 bg-white/5 px-2 py-0.5 border border-white/10"
+                          className="text-[10px] text-[#111111]/70 bg-white/5 px-2 py-0.5 border border-black/10"
                         >
                           {item}
                         </span>
@@ -250,7 +250,7 @@ export const Sponsors: React.FC<SponsorsProps> = ({ onPartnerClick }) => {
                         playSfx('click');
                         onPartnerClick();
                       }}
-                      className="text-[11px] font-bold text-[#FFD633] hover:text-white underline decoration-[#FFD633] flex items-center gap-1 cursor-pointer active:scale-95"
+                      className="text-[11px] font-bold text-[#FFD633] hover:text-[#111111] underline decoration-[#FFD633] flex items-center gap-1 cursor-pointer active:scale-95"
                     >
                       <span>INQUIRE SLOT</span>
                       <span>→</span>
